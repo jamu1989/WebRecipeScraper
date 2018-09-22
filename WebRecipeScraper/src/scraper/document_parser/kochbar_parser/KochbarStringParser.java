@@ -25,16 +25,16 @@ public class KochbarStringParser extends DocToStringParser {
 	}
 
 	@Override
-	public List<String[]> getIncredients() {
-		List<String[]> incredients = new ArrayList<>();
+	public List<String[]> getIngredients() {
+		List<String[]> ingredients = new ArrayList<>();
 		Element table = doc.getElementsByClass("kb-recipe-ingredient-table").first();
 		Elements rows = table.getElementsByTag("tr");
 		for (int i = 0; i < rows.size(); i++) {
 			Elements cols = rows.get(i).select("td");
 			String[] amountIncredient = { cols.get(0).text(), cols.get(1).text() };
-			incredients.add(amountIncredient);
+			ingredients.add(amountIncredient);
 		}
-		return incredients;
+		return ingredients;
 	}
 
 	@Override

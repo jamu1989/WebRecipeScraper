@@ -22,7 +22,7 @@ public class RecipeBuilder {
 		name = this.parser.getName();
 		cookingInstructions = this.parser.getInstructions();
 		preparationInfo = this.parser.getPreparationInfo();
-		for(String[] amountIngredientPair : this.parser.getIncredients()) {
+		for(String[] amountIngredientPair : this.parser.getIngredients()) {
 			ingredients.add(new Ingredient(amountIngredientPair[0],amountIngredientPair[1]));
 		}
 		this.recipe = new Recipe(name, cookingInstructions, preparationInfo, ingredients);	

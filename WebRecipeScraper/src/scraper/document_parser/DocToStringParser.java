@@ -36,7 +36,7 @@ public abstract class DocToStringParser {
 	 * </ul>
 	 * @return List&lt;String[ ]&gt;
 	 */
-	public abstract List<String[]> getIncredients() ;
+	public abstract List<String[]> getIngredients() ;
 
 	/**
 	 * This method returns the preperation info.<br>
